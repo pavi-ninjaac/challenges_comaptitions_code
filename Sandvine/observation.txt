@@ -1,0 +1,26 @@
+worker planned deleivered
+1	2000	2000 		[4000 	4000 ][5000 5000][15000 15000][45000 45000]
+2	2000	3028
+3	2000	3835
+4	2000	3182
+5	2000	3423
+6	2000	3481
+#second phase
+1	500	500
+2	500	764
+3	500	942
+4	500	780
+5 	500	843
+6	500	871
+
+AFTER SEVERAL CHECK , i found there is no problem with the NUMBER OF PACKAGES , there is a problem with NUMBER OF WORKERS
+# My first observation is the problem occures when the number of workers greater than 1 (when there is one worker the packages are correcctly delivered)
+# 1) reason may be they are delivering the same package by 2 or more workers ---> need to fix it (count increament is happening even if the package alredy delivered is detected)
+
+# 2) The logger didn't maintain the package delivered information correctly
+# 3) Even after delivered the package, package delivered status didn't update.
+# 4) Same package assigned to 2 or more workers (need to check already assigned or not while assigning packages) ((((CORRECT))))
+# 5) Threading is used here, so there is a chance for "race condition".
+
+SOLUTION:
+after checking all the possibility 

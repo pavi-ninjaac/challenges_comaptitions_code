@@ -1,0 +1,14 @@
+2021-04-30 01:30:59,453 [    INFO] leela: Starting work
+2021-04-30 01:30:59,453 [    INFO] leela: Package package_2 is assigned to <Worker(Leela, started 3476)>
+2021-04-30 01:30:59,453 [    INFO] leela: Delivering package package_2
+2021-04-30 01:30:59,453 [    INFO] leela: Package package_2 successfully delivered
+2021-04-30 01:30:59,453 [    INFO] leela: No more packages to deliver
+2021-04-30 01:30:59,453 [    INFO] leela: The work is fully done
+3 [    INFO] philip:2021-04-30 01:30:59,453 [    INFO] employer: Package package_3 was delivered by Philip
+2021-04-30 01:31:00,467 [    INFO] employer: All packages delivered
+2021-04-30 01:31:00,467 [    INFO] employer: The work is fully done in 1 seconds
+2021-04-30 01:31:00,467 [    INFO] employer: Employer balance: 0
+2021-04-30 01:31:00,467 [    INFO] employer: Packages delivered by Philip: 2
+2021-04-30 01:31:00,467 [    INFO] employer: Packages delivered by Leela: 1
+2021-04-30 01:31:00,467 [    INFO] employer: Total number of packages planned for delivery: 3 
+2021-04-30 01:31:00,467 [    INFO] employer: Total number of packages delivered by workers: 3
