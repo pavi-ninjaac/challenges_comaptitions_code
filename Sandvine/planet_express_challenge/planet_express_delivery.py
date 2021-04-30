@@ -172,13 +172,13 @@ def get_logger(name):
 
 
 def main():
-    planet_express = Employer(5000)
+    planet_express = Employer(10000)
     planet_express.hire("Philip")
     planet_express.hire("Leela")
     planet_express.hire("Bender")
     planet_express.hire("Amy")
-    #planet_express.hire("Hermes")
-    #planet_express.hire("Zoidberg")
+    planet_express.hire("Hermes")
+    planet_express.hire("Zoidberg")
     planet_express.deliver_all_packages()
 
 

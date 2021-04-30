@@ -18,8 +18,8 @@ class Package:
         self.worker = worker
 
     def mark_delivered(self):
-        if self.delivered:
-            raise Exception(f"Package {self.name} was already delivered")
+        #if self.delivered:
+        #   raise Exception(f"Package {self.name} was already delivered")
 
         self.delivered = True
 
@@ -33,7 +33,7 @@ class Worker(threading.Thread):
         super().__init__()
         self.setName(name)
         self.employer = employer
-        self.balance = 0
+        #self.balance = 0
         self.packages_delivered = 0
         self.logger = get_logger(name.lower())
     
@@ -58,7 +58,7 @@ class Worker(threading.Thread):
 
     def deliver_package(self , package):
         package.assign_worker(self)
-        self.logger.info(f"Package {package.name} is assigned to {package.worker}")
+        self.logger.info(f"Package {package.name} is assigned to {package.worker.name}")
         self.logger.info(f"Delivering package {package.name}") #excution stoped
         self.logger.info(f"Package {package.name} successfully delivered")
 
@@ -83,10 +83,10 @@ class Employer:
         with self.the_lock:
             if self.package_start < self.packages_to_deliver:
                 package = self.packages[self.package_start]
-                if not package.delivered:
-                    if not package.assigned:
+                
+                if not package.assigned:
                         package.assigned = True
-                        self.package_start+=1
+                        self.package_start += 1
                         return package
         
         return None
@@ -97,11 +97,11 @@ class Employer:
 
     def report_package_delivered(self , package):
         self.balance -= 1
-        package.worker.balance += 1
-        try:
-            package.mark_delivered()
-        except Exception as e:
-            self.logger.warning(f"A problem occurred while delivering the package: {e}") 
+        #package.worker.balance += 1
+        #try:
+        package.mark_delivered()
+        #except Exception as e:
+        #    self.logger.warning(f"A problem occurred while delivering the package: {e}") 
 
         self.logger.info(f"Package {package.name} was delivered by {package.worker.name}")  
     
@@ -154,6 +154,12 @@ def main():
     planet_express.hire("Amy")
     planet_express.hire("Hermes")
     planet_express.hire("Zoidberg")
+    planet_express.hire("a")
+    planet_express.hire("v")
+    planet_express.hire("c")
+    planet_express.hire("s")
+    planet_express.hire("e")
+    planet_express.hire("w")
     
     planet_express.deliver_all_packages()
 
