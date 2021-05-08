@@ -1,0 +1,19 @@
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This report provides comparative analysis of Heartrate and SpO2 data from OmnyTraq(OT) and an FDA approved (510K clearance) device for all users. The analysis is based on calculating standard deviation (SD) of {sds_sample_size} and {sdp_sample_size} minutes of continuous rolling samples of data from both devices and then calculating the average of difference.
+<br/>
+&bull;&nbsp;The SPO2 has {spo2_datapoints} data points from {spo2_start_date} to {spo2_end_date} for {spo2_duration} hours.
+&bull;&nbsp;The Heart Rate has {hr_datapoints} data points from {hr_start_date} to {hr_end_date} for {hr_duration} hours.
+<br/><br/>
+<b><i>Definitions:</i></b>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#10004; <b>σ.t5</b>  - SD of data from OmnyTraq of all users for {sds_sample_size} minutes of continuous rolling samples
+&nbsp;&nbsp;&nbsp;&nbsp;&#10004; <b>σ.c5</b>  - SD of data from FDA approved device of all users for {sds_sample_size} minutes of continuous rolling samples  
+&nbsp;&nbsp;&nbsp;&nbsp;&#10004; <b>σ.t15</b> - SD of entire datapoints from OmnyTraq of all users for {sdp_sample_size} minutes of continuous rolling samples  
+&nbsp;&nbsp;&nbsp;&nbsp;&#10004; <b>σ.c15</b> - SD of entire datapoints from the FDA approved device of all users for {sdp_sample_size} minutes of continuous rolling samples  
+<br/><br/>
+<b><i>Definitions w.r.t Individual User:</i></b>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#10004; <b>σ.t5</b>  - Standard deviation (SD) of data from OmnyTraq of a user for rolling {sds_sample_size} minutes.
+&nbsp;&nbsp;&nbsp;&nbsp;&#10004; <b>σ.c5</b>  - SD of data from FDA approved device of a user for rolling {sds_sample_size} minutes.
+&nbsp;&nbsp;&nbsp;&nbsp;&#10004; <b>σ.t15</b> - SD of data from OmnyTraq of a user for rolling {sdp_sample_size} minutes.
+&nbsp;&nbsp;&nbsp;&nbsp;&#10004; <b>σ.c15</b> - SD of data from the FDA approved Comparative device of a user for rolling {sdp_sample_size} minutes.
+
